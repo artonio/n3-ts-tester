@@ -1,6 +1,5 @@
 // import * as N3 from "../../src/types/n3typing";
 import * as N3 from "n3";
-import { N3Writer, Quad} from "n3";
 
 describe('Testing N3Writer', () => {
     it('Add Single Prefix', () => {
@@ -32,10 +31,10 @@ describe('Testing N3Writer', () => {
     });
 
     it('Creqte Quad', () => {
-        const q: Quad = N3.DataFactory.quad(N3.DataFactory.namedNode('http://example.org/cartoons#Tom'),
+        const q = N3.DataFactory.quad(N3.DataFactory.namedNode('http://example.org/cartoons#Tom'),
             N3.DataFactory.namedNode('http://www.w3.org/1999/02/22-rdf-syntax-ns#type'),
             N3.DataFactory.namedNode('http://example.org/cartoons#Cat'));
-
-        console.log(q.constructor.prototype);
+        // q.subject.id is not accessible because it returns RDF.Quad and not a Quad from N3
+        console.log(q.subject);
     });
 });
