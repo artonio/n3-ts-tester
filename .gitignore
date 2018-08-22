@@ -1,0 +1,8 @@
+.idea/
+node_modules/
+bin/
+reports/
+*.log
+*.d.js
+*.spec.js
+
