@@ -34,7 +34,7 @@ describe('Testing N3Writer', () => {
         const q = N3.DataFactory.quad(N3.DataFactory.namedNode('http://example.org/cartoons#Tom'),
             N3.DataFactory.namedNode('http://www.w3.org/1999/02/22-rdf-syntax-ns#type'),
             N3.DataFactory.namedNode('http://example.org/cartoons#Cat'));
-        // q.subject.id is not accessible because it returns RDF.Quad and not a Quad from N3
-        console.log(q.subject);
+            // value is returning the object 'id' property so the return type is correct
+            console.log(q.subject.value);
     });
 });
