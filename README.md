@@ -1,4 +1,4 @@
-Test N3.js type definitions
+Test [N3.js](https://github.com/rdfjs/N3.js) type definitions
 
 run
 ``
